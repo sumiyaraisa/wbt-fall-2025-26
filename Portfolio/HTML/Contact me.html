@@ -7,35 +7,81 @@
 </head>
 
 <body>
-    <ul>
-        <li><B><a href="/Portfolio/index.html">Home</a> </B></li>
-    </ul>
-    <form method="POST">
-        First Name: <input type="text" name="firstname" required><br>
-        Last Name: <input type="text" name="firstname" required><br>
-        Email: <input type="email" required><br>
-        Company Name=<input type="text" name="company_name"><br>
+    <nav>
+        <ul>
+            <li><strong><a href="/Portfolio/index.html">Home</a></strong></li>
+            <li><strong><a href="/Portfolio/HTML/Education.html">Education</a></strong></li>
+            <li><strong><a href="/Portfolio/HTML/Experience.html">Experience</a></strong></li>
+            <li><strong><a href="/Portfolio/HTML/Project.html">Project</a></strong></li>
 
-        Reason For Contact:<br>
-        <input type="radio" name="Reason for contact" required>Project<br>
-        <input type="radio" name="Reason for contact" required>Thesis<br>
-        <input type="radio" name="Reason for contact" required>Job<br>
 
-        Services that provided:<br>
-        <input type="checkbox" name="service provided">Web Development<br>
-        <input type="checkbox" name="service provided">AI Development<br>
-        <input type="checkbox" name="service provided">Game Development<br>
-        <required>
+        </ul>
+    </nav>
+    <div class="form-container">
+        <h2>Contact Me</h2>
 
-            Book an Appoinment:<br>
-            <input type="date" name="book an appoinment" required><br>
+        <form method="POST">
+            <div class="form-row">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="first_name" name="first_name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="last_name" name="last_name" required>
+            </div>
+
+            <div class="form-row">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-row">
+                <label for="company_name">Company Name:</label>
+                <input type="text" id="company_name" name="company_name">
+            </div>
+
+            <div class="form-row1">
+                <label>Reason for Contact:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="reason_for_contact" value="Project" required> Project
+                    </label>
+                    <label>
+                        <input type="radio" name="reason_for_contact" value="Thesis" required> Thesis
+                    </label>
+                    <label>
+                        <input type="radio" name="reason_for_contact" value="Job" required> Job
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-row2">
+                <label>Services Needed:</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="service_provided" value="Web Development"> Web Development
+                    </label>
+                    <label>
+                        <input type="checkbox" name="service_provided" value="AI Development"> AI Development
+                    </label>
+                    <label>
+                        <input type="checkbox" name="service_provided" value="App Development"> App Development
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label for="appointment_date">Book an Appointment:</label>
+                <input type="date" id="appointment_date" name="appointment_date" required>
+            </div>
+
             <div class="button-group">
                 <input type="submit" value="Submit">
                 <input type="reset" value="Reset">
             </div>
-
-    </form>
-
+        </form>
+    </div>
 </body>
 
 </html>
