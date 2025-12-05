@@ -1,40 +1,238 @@
 body {
     background-color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
-    color: rgba(0, 0, 0, 0.671);
-}
-
-form [type=text] {
-    width: 60%;
-    margin: 10px 0;
-    box-sizing: border-box;
-}
-
-nav ul {
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.805)
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul a {
-    display: block;
-    color: white;
+    color: rgba(0, 0, 0, 0.8);
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
 }
 
-nav ul a:hover {
-    background-color: black;
+/*navigation bar*/
+nav ul {
+    list-style: none;
+    text-align: center;
+    background: rgb(44, 62, 80);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+nav a:hover {
+    background: darkcyan;
+    border-radius: 3px;
+}
+
+/* Project Layout */
+.project-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    margin: 20px auto;
+    padding: 15px;
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-container img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.project-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.project-info p {
+    margin: 5px 0;
+}
+
+/* Skills Section */
+.skills-section {
+    margin-top: 40px;
+}
+
+.skills-table-container {
+    width: 70%;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: aliceblue;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    min-width: 600px;
+}
+
+th {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+tr {
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s ease;
+}
+
+tr:hover {
+    background-color: #f8f9fa;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+td {
+    padding: 15px;
+    font-size: 1rem;
+}
+
+/* Category highlights */
+td:first-child {
+    color: #2c3e50;
+    font-weight: 600;
+}
+
+td:nth-child(2) {
+    color: darkcyan;
+}
+
+td:last-child {
+    color: #27ae60;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        margin: 20px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    nav ul a {
+        padding: 14px;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-image {
+        flex: 0 0 auto;
+        padding: 15px;
+    }
+
+    .project-image img {
+        height: 120px;
+        max-width: 120px;
+    }
+
+    .project-content {
+        padding: 15px;
+    }
+
+    .project-title {
+        font-size: 1.2rem;
+    }
+
+    .skills-table-container {
+        border-radius: 8px;
+    }
+
+    th,
+    td {
+        padding: 14px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .project-item {
+        border-radius: 8px;
+    }
+
+    .project-image img {
+        height: 100px;
+        max-width: 100px;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .project-language {
+        font-size: 1rem;
+    }
+
+    th,
+    td {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-item {
+        flex-direction: column;
+    }
+
+    .project-image {
+        padding: 20px;
+    }
 }
