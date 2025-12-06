@@ -6,35 +6,27 @@ h2 {
     color: black;
 }
 
-form [type=text] {
-    width: 60%;
-    margin: 10px 0;
-    box-sizing: border-box;
-}
-
+/*navigation bar*/
 nav ul {
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.805)
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul a {
-    display: block;
-    color: white;
+    list-style: none;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
+    background: rgb(44, 62, 80);
+    padding: 15px;
+    border-radius: 5px;
 }
 
-nav ul a:hover {
-    background-color: black;
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+nav a:hover {
+    background: darkcyan;
+    border-radius: 3px;
 }

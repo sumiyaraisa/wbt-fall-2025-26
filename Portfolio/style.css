@@ -6,35 +6,95 @@ h2 {
     color: rgba(0, 0, 0, 0.671);
 }
 
-form [type=text] {
-    width: 60%;
-    margin: 10px 0;
-    box-sizing: border-box;
-}
-
+/*navigation bar*/
 nav ul {
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.805)
-}
-
-nav ul li {
-    margin: 0;
-}
-
-nav ul a {
-    display: block;
-    color: white;
+    list-style: none;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-
+    background: rgb(44, 62, 80);
+    padding: 15px;
+    border-radius: 5px;
 }
 
-nav ul a:hover {
-    background-color: black;
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+}
+
+nav a:hover {
+    background: darkcyan;
+    border-radius: 3px;
+}
+
+/* Profile layout */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+/* Circular image */
+.profile-img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Text area */
+.profile-info {
+    max-width: 600px;
+}
+
+.profile-info h2,
+.profile-info h3,
+.profile-info h4,
+.profile-info p {
+    margin: 8px 0;
+}
+
+@media (max-width: 768px) {
+
+    .profile-container {
+        gap: 15px;
+        /* Reduce spacing */
+        width: 95%;
+        justify-content: flex-start;
+        /* Keep items starting from left */
+    }
+
+    .profile-img {
+        width: 140px;
+        /* Smaller for mobile */
+        height: 140px;
+        flex-shrink: 0;
+        /* Prevent image from shrinking oddly */
+    }
+
+    .profile-info {
+        max-width: 100%;
+    }
+
+    .profile-info h2 {
+        font-size: 20px;
+    }
+
+    .profile-info h3,
+    .profile-info h4 {
+        font-size: 16px;
+    }
+
+    .profile-info p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
 }
