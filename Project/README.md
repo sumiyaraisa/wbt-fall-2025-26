@@ -22,7 +22,7 @@ To run this project locally, follow these steps:
 
 ## Clone the Repository:
 Bash
-git clone https://github.com/your-username/InternConnectBD.git
+git clone [https://github.com/your-username/InternConnectBD.git](https://github.com/sumiyaraisa/wbt-fall-2025-26.git)
 
 ## Database Configuration:
 - Open your MySQL administration tool (like PHPMyAdmin).
