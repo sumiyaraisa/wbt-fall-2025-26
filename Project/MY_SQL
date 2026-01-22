@@ -1,0 +1,67 @@
+
+1)
+CREATE TABLE students_reg (
+    Student_id INT AUTO_INCREMENT PRIMARY KEY,
+    Full_name VARCHAR(100) NOT NULL,
+    Email VARCHAR(100) NOT NULL UNIQUE,
+    PASSWORD VARCHAR(255) NOT NULL,
+    Phone VARCHAR(15) NOT NULL,
+    Gender ENUM('Male', 'Female', 'Other') NOT NULL,
+    Location VARCHAR(50) NOT NULL,
+    City VARCHAR(50) NOT NULL,
+    Created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+2) 
+
+CREATE TABLE users (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    role ENUM('student', 'company', 'admin') NOT NULL,
+    status ENUM('active', 'inactive', 'suspended') DEFAULT 'active',
+    last_login TIMESTAMP NULL DEFAULT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+3)
+
+CREATE TABLE company_reg (
+    company_id INT AUTO_INCREMENT PRIMARY KEY,
+    company_name VARCHAR(255) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    location VARCHAR(50) NOT NULL,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+4)
+
+CREATE TABLE internships (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    company_id INT NOT NULL,
+    title VARCHAR(200) NOT NULL,
+    description TEXT NOT NULL,
+    required_skills TEXT,
+    start_month DATE NOT NULL,
+    end_month DATE NOT NULL,
+    application_deadline DATE NOT NULL,
+    duration_months FLOAT,
+    status ENUM('open', 'closed') DEFAULT 'open',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+   
+);
+
+5)CREATE TABLE applications (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    internship_id INT NOT NULL,
+    student_id INT NOT NULL,
+    student_name VARCHAR(100) NOT NULL,
+    student_email VARCHAR(100) NOT NULL,
+    student_skills TEXT,
+    status ENUM('pending', 'shortlisted', 'rejected') DEFAULT 'pending',
+    applied_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (internship_id) REFERENCES internships(id) ON DELETE CASCADE
+);
