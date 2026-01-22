@@ -22,7 +22,7 @@ To run this project locally, follow these steps:
 
 ## Clone the Repository:
 Bash
-git clone [https://github.com/your-username/InternConnectBD.git](https://github.com/sumiyaraisa/wbt-fall-2025-26.git)
+git clone (https://github.com/sumiyaraisa/wbt-fall-2025-26.git)
 
 ## Database Configuration:
 - Open your MySQL administration tool (like PHPMyAdmin).
@@ -39,7 +39,7 @@ git clone [https://github.com/your-username/InternConnectBD.git](https://github.
 ## Run the Server:
 Place the project folder in your local server directory (e.g., htdocs for XAMPP).
 Start Apache and MySQL modules.
-Navigate to http://localhost/InternConnectBD/index.php in your browser.
+Navigate to http://localhost/wbt/internConnectBD/index.php in your browser.
 
 ## 💡 How to Use
 For Students:
